@@ -36,6 +36,18 @@ For example, to set the timeout to 120 seconds:
 contboot 120
 ```
 
+Work with pm2:
+
+```sh
+pm2 start --max-restarts 0 contboot 
+pm2 save
+```
+
+```sh
+pm2 start --max-restarts 0 contboot -- 120
+pm2 save
+```
+
 ## Example Output
 
 Below is an example of the output when running `contboot`:
@@ -44,12 +56,12 @@ Below is an example of the output when running `contboot`:
 [2024-07-07 12:31:16:920] [INFO] Starting contboot...
 [2024-07-07 12:31:16:938] [INFO] Docker is available.
 [2024-07-07 12:31:17:112] [INFO] Found 2 containers with restart policy 'always'.
-[2024-07-07 12:31:17:115] [INFO] Inspecting container webui (79faad9901c)
-[2024-07-07 12:31:17:118] [INFO] Container webui (79faad9901c) is not running. Status: exited
-[2024-07-07 12:31:17:133] [INFO] Attempting to start container: webui (79faad9901c)
-[2024-07-07 12:31:17:273] [INFO] Started container: webui (79faad9901c)
-[2024-07-07 12:31:27:285] [INFO] Container webui (79faad9901c) status: running
-[2024-07-07 12:31:27:285] [INFO] Container webui (79faad9901c) is running.
+[2024-07-07 12:31:17:115] [INFO] Inspecting container container1 (79faad9901c)
+[2024-07-07 12:31:17:118] [INFO] Container container1 (79faad9901c) is not running. Status: exited
+[2024-07-07 12:31:17:133] [INFO] Attempting to start container: container1 (79faad9901c)
+[2024-07-07 12:31:17:273] [INFO] Started container: container1 (79faad9901c)
+[2024-07-07 12:31:27:285] [INFO] Container container1 (79faad9901c) status: running
+[2024-07-07 12:31:27:285] [INFO] Container container1 (79faad9901c) is running.
 [2024-07-07 12:31:27:285] [INFO] Ending contboot...
 [2024-07-07 12:31:27:285] [INFO] Summary:
 [2024-07-07 12:31:27:285] [INFO]   Started containers: 1

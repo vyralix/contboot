@@ -1,0 +1,35 @@
+{
+  "name": "contboot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "bin": {
+    "contboot": "./bin/contboot"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vyralix/contboot.git"
+  },
+  "keywords": [
+    "docker",
+    "boot",
+    "startup",
+    "container",
+    "watch",
+    "wsl",
+    "windows"
+  ],
+  "author": "vyralix",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vyralix/contboot/issues"
+  },
+  "homepage": "https://github.com/vyralix/contboot#readme",
+  "description": "",
+  "dependencies": {
+    "dockerode": "^4.0.2",
+    "winston": "^3.13.0"
+  }
+}
